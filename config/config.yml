@@ -1,0 +1,54 @@
+# 系统环境
+profile: dev
+
+# 是否监控
+monitor: true
+# PprofAddrs 192.168.1.100:7272,10.0.0.1:7272
+monitoraddrs: ['0.0.0.0:4272']
+
+# PprofAddrs 192.168.1.100:7271,10.0.0.1:7271
+pprofaddrs: ['0.0.0.0:4271']
+
+# 服务监听地址
+addr: 0.0.0.0:4080
+
+# 日志配置文件
+logger: config/logger.xml
+
+# 数据库配置
+db:
+  #实例列表
+  instances:
+    master:
+      driver: mysql
+      url: root:V4MW7Pha42Au@tcp(172.31.233.89:3306)/token_bank?timeout=12s&readTimeout=12s&writeTimeout=5s&parseTime=true&charset=utf8mb4
+    lock_master:
+      driver: mysql
+      url: root:V4MW7Pha42Au@tcp(172.31.233.89:3306)/token_bank?timeout=12s&readTimeout=12s&writeTimeout=5s&parseTime=true&charset=utf8mb4
+
+# 缓存配置
+redis:
+  #实例列表
+  instances:
+    master:
+      url: server.redis.com:6379
+      password: ""
+
+# 服务监听地址
+gidaddr: 'http://gid.mytokenpocket.vip'
+bosnodechecktaskswitch: 1
+bosaccountresourcechecktaskswitch: 1
+eosnodechecktaskswitch: 1
+eosaccountresourcechecktaskswitch: 1
+eosaccountrexchecktaskswitch: 1
+alertserveraddr: 'http://alert.mytokenpocket.vip'
+eosendpoint: 'http://openapi.eos.ren'
+#1秒 CPU
+eoscpuavailable: 10000
+#1M NET
+eosnetavailable: 11658
+bosendpoint: 'http://bospush.mytokenpocket.vip'
+#1秒 CPU
+boscpuavailable: 10000
+#1M NET
+bosnetavailable: 11658
