@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0615e20f-2346-497e-9b52-9c8529f47ff9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/model/base_model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/student_register_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/student_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/student_register_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/student_model.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/student_register_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/student_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a.s" beforeDir="false" afterPath="$PROJECT_DIR$/a.s" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/student_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/student_controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/console.log.2019-13-10" beforeDir="false" afterPath="$PROJECT_DIR$/logs/console.log.2019-13-10" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/base_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/base_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/student_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/student_model.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rediskey/redis_keys.go" beforeDir="false" afterPath="$PROJECT_DIR$/rediskey/redis_keys.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/student_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/student_service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signal.go" beforeDir="false" afterPath="$PROJECT_DIR$/signal.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task/task_manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/task/task_manager.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,11 +33,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="113" column="40" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controller/student_controller.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2225">
-              <caret line="706" column="1" lean-forward="true" selection-start-line="706" selection-start-column="1" selection-end-line="706" selection-end-column="1" />
+            <state relative-caret-position="234">
+              <caret line="608" column="33" selection-start-line="608" selection-start-column="33" selection-end-line="608" selection-end-column="33" />
+              <folding>
+                <element signature="n#!!block;n#ChangePhone#0" />
+                <element signature="n#!!block;n#ChangeAddress#0" />
+                <element signature="n#!!block;n#ChangeGrade#0" />
+                <element signature="n#!!block;n#ChangeName#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -37,17 +60,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/service/student_service.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-321">
-              <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+            <state relative-caret-position="497">
+              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+              <folding>
+                <element signature="e#17#55#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/student_model.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-202">
-              <caret line="156" column="14" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
+            <state relative-caret-position="428">
+              <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
               <folding>
                 <element signature="e#15#146#0" expanded="true" />
               </folding>
@@ -56,28 +82,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Go/src/builtin/builtin.go">
+        <entry file="file://$PROJECT_DIR$/logs/console.log.2019-13-10">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
-              <caret line="261" column="7" selection-start-line="261" selection-start-column="7" selection-end-line="261" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/base_model.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/github.com/go-redis/redis/command.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="772" column="31" selection-start-line="772" selection-start-column="31" selection-end-line="772" selection-end-column="31" />
+            <state relative-caret-position="143">
+              <caret line="175" column="25" selection-start-line="175" selection-start-column="25" selection-end-line="179" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -106,7 +114,6 @@
         <option value="$PROJECT_DIR$/task/task_manager.go" />
         <option value="$PROJECT_DIR$/logs/console.log.2019-02-10" />
         <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/middleware/auth.go" />
         <option value="$PROJECT_DIR$/config/config.go" />
         <option value="$PROJECT_DIR$/service/student_register_service.go" />
@@ -116,9 +123,10 @@
         <option value="$PROJECT_DIR$/config/config.yml" />
         <option value="$PROJECT_DIR$/controller/student_register_controller.go" />
         <option value="$PROJECT_DIR$/model/base_model.go" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/model/student_model.go" />
         <option value="$PROJECT_DIR$/controller/student_controller.go" />
         <option value="$PROJECT_DIR$/service/student_service.go" />
-        <option value="$PROJECT_DIR$/model/student_model.go" />
       </list>
     </option>
   </component>
@@ -223,10 +231,9 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1293" height="813" extended-state="6" />
-    <editor active="true" />
+    <frame x="-6" y="-6" width="1293" height="813" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.37975708" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.37975708" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50121063" side_tool="true" weight="0.2534413" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -239,7 +246,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32991204" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23020528" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.44134897" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -367,34 +374,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rediskey/redis_keys.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="e#18#131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="109" column="37" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/github.com/tb_common/cache/cache.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
           <caret line="58" column="20" lean-forward="true" selection-start-line="58" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -446,27 +429,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://C:/Go/src/net/http/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="1877" selection-start-line="1877" selection-end-line="1877" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rediskey/redis_keys.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/console.log.2019-13-10">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="175" column="25" selection-start-line="175" selection-start-column="25" selection-end-line="179" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controller/student_controller.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2225">
-          <caret line="706" column="1" lean-forward="true" selection-start-line="706" selection-start-column="1" selection-end-line="706" selection-end-column="1" />
+        <state relative-caret-position="234">
+          <caret line="608" column="33" selection-start-line="608" selection-start-column="33" selection-end-line="608" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!block;n#ChangePhone#0" />
+            <element signature="n#!!block;n#ChangeAddress#0" />
+            <element signature="n#!!block;n#ChangeGrade#0" />
+            <element signature="n#!!block;n#ChangeName#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/student_service.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-321">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
+        <state relative-caret-position="497">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+          <folding>
+            <element signature="e#17#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/model/student_model.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-202">
-          <caret line="156" column="14" selection-start-line="156" selection-start-column="14" selection-end-line="156" selection-end-column="14" />
+        <state relative-caret-position="428">
+          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
           <folding>
             <element signature="e#15#146#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="113" column="40" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="40" />
         </state>
       </provider>
     </entry>

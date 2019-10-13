@@ -5,5 +5,5 @@ type Student struct {
 	Name    string
 	Subject string
 	Address string
-	Grade string
+	Grade   string
 }

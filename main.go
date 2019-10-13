@@ -75,19 +75,19 @@ func main() {
 	p := prom.NewPrometheus("gin")
 	p.Use(router)
 
-	studentRegisterModel, err := model.NewStudentRegisterModel(&appConfig)
+	studentModel, err := model.NewStudentModel(&appConfig)
 	if err != nil {
-		log.Errorf("init studentRegisterModel error, %v", err)
+		log.Errorf("init studentModel error, %v", err)
 	}
 
 	appContext := &service.AppContext{
 		Config:   &appConfig,
 		Services: map[string]interface{}{},
 		Models: map[string]interface{}{
-			"studentRegisterModel": studentRegisterModel,
+			"studentModel": studentModel,
 		},
 	}
-	appContext.Services["studentRegisterService"], _ = service.NewStudentRegisterService(appContext)
+	appContext.Services["studentService"], _ = service.NewStudentService(appContext)
 
 	authorized := router.Group("/v1/")
 	authorized.Use(middleware.Auth())
@@ -106,8 +106,14 @@ func main() {
 			})
 		})
 	}
-	studentRegisterController, _ := controller.NewStudentRegisterController(appContext)
-	router.POST("/v1/student_register", studentRegisterController.Register)
+	studentController, _ := controller.NewStudentController(appContext)
+	router.POST("/v1/student/Register", studentController.Register)
+	router.POST("/v1/student/GetStudent", studentController.GetStudent)
+	router.POST("/v1/student/ChangePhone", studentController.ChangePhone)
+	router.POST("/v1/student/ChangeAddress", studentController.ChangeAddress)
+	router.POST("/v1/student/ChangeGrade", studentController.ChangeGrade)
+	router.POST("/v1/student/ChangeSubject", studentController.ChangeSubject)
+	router.POST("/v1/student/ChangeName", studentController.ChangeName)
 
 	taskManager, err := task.NewTaskManager(&appConfig, appContext)
 	if err != nil {

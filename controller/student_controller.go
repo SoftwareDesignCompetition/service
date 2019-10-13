@@ -135,12 +135,12 @@ func (s *StudentController) Register(c *gin.Context) {
 		Address: address,
 		Grade:   grade,
 	}
-	resp,err := s.StudentService.GetAllPhone()								//检验是否已经注册
-	for _,i := range resp{
-		if i == student.Phone{
+	resp, err := s.StudentService.GetAllPhone() //检验是否已经注册
+	for _, i := range resp {
+		if i == student.Phone {
 			c.JSON(201, gin.H{
 				"result":  1,
-				"message": "Illegal double registration",								//非法双重注册
+				"message": "Illegal double registration", //非法双重注册
 			})
 			return
 		}
@@ -228,8 +228,8 @@ func (s *StudentController) GetStudent(c *gin.Context) {
 		})
 		return
 	}
-	data,err := s.StudentService.GetStudentFormPhone(phone)
-	if err!= nil{
+	data, err := s.StudentService.GetStudentFormPhone(phone)
+	if err != nil {
 		log.Error("search student error")
 		c.JSON(400, gin.H{
 			"result":  2,
@@ -237,16 +237,24 @@ func (s *StudentController) GetStudent(c *gin.Context) {
 		})
 		return
 	}
+	if data.Phone == "" {
+		c.JSON(200, gin.H{
+			"result":  0,
+			"message": "success",
+			"data":    "",
+		})
+		return
+	}
 	c.JSON(200, gin.H{
 		"result":  0,
 		"message": "success",
-		"data" : fmt.Sprint(data),
+		"data":    fmt.Sprint(data),
 	})
 	return
 
 }
 
-func (s *StudentController) ChangePhone(c *gin.Context){
+func (s *StudentController) ChangePhone(c *gin.Context) {
 	param := map[string]interface{}{}
 	signal := c.PostForm("signal")
 	if signal == "" {
@@ -322,8 +330,8 @@ func (s *StudentController) ChangePhone(c *gin.Context){
 		})
 		return
 	}
-	err = s.StudentService.ChangePhone(phone,new_phone)
-	if err!= nil{
+	err = s.StudentService.ChangePhone(phone, new_phone)
+	if err != nil {
 		log.Error("change phone error")
 		c.JSON(400, gin.H{
 			"result":  2,
@@ -338,7 +346,7 @@ func (s *StudentController) ChangePhone(c *gin.Context){
 	return
 }
 
-func (s *StudentController) ChangeAddress(c *gin.Context){
+func (s *StudentController) ChangeAddress(c *gin.Context) {
 	param := map[string]interface{}{}
 	signal := c.PostForm("signal")
 	if signal == "" {
@@ -414,8 +422,8 @@ func (s *StudentController) ChangeAddress(c *gin.Context){
 		})
 		return
 	}
-	err = s.StudentService.ChangeAddress(phone,address)
-	if err!= nil{
+	err = s.StudentService.ChangeAddress(phone, address)
+	if err != nil {
 		log.Error("change address error")
 		c.JSON(400, gin.H{
 			"result":  2,
@@ -430,7 +438,7 @@ func (s *StudentController) ChangeAddress(c *gin.Context){
 	return
 }
 
-func (s *StudentController) ChangeGrade(c *gin.Context){
+func (s *StudentController) ChangeGrade(c *gin.Context) {
 	param := map[string]interface{}{}
 	signal := c.PostForm("signal")
 	if signal == "" {
@@ -506,8 +514,8 @@ func (s *StudentController) ChangeGrade(c *gin.Context){
 		})
 		return
 	}
-	err = s.StudentService.ChangeGrade(phone,grade)
-	if err!= nil{
+	err = s.StudentService.ChangeGrade(phone, grade)
+	if err != nil {
 		log.Error("change grade error")
 		c.JSON(400, gin.H{
 			"result":  2,
@@ -522,7 +530,7 @@ func (s *StudentController) ChangeGrade(c *gin.Context){
 	return
 }
 
-func (s *StudentController) ChangeSubject(c *gin.Context){
+func (s *StudentController) ChangeSubject(c *gin.Context) {
 	param := map[string]interface{}{}
 	signal := c.PostForm("signal")
 	if signal == "" {
@@ -598,8 +606,8 @@ func (s *StudentController) ChangeSubject(c *gin.Context){
 		})
 		return
 	}
-	err = s.StudentService.ChangeSubject(phone,subject)
-	if err!= nil{
+	err = s.StudentService.ChangeSubject(phone, subject)
+	if err != nil {
 		log.Error("change subject error")
 		c.JSON(400, gin.H{
 			"result":  2,
@@ -614,7 +622,7 @@ func (s *StudentController) ChangeSubject(c *gin.Context){
 	return
 }
 
-func (s *StudentController) ChangeName(c *gin.Context){
+func (s *StudentController) ChangeName(c *gin.Context) {
 	param := map[string]interface{}{}
 	signal := c.PostForm("signal")
 	if signal == "" {
@@ -690,8 +698,8 @@ func (s *StudentController) ChangeName(c *gin.Context){
 		})
 		return
 	}
-	err = s.StudentService.ChangeName(phone,name)
-	if err!= nil{
+	err = s.StudentService.ChangeName(phone, name)
+	if err != nil {
 		log.Error("change name error")
 		c.JSON(400, gin.H{
 			"result":  2,
