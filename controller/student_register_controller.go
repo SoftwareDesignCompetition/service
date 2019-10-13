@@ -5,6 +5,8 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/service/middleware"
 	"github.com/service/service"
+	"strconv"
+	"time"
 )
 
 type StudentRegisterController struct {
@@ -27,11 +29,10 @@ func (s *StudentRegisterController) Register(c *gin.Context) {
 	if signal == "" {
 		c.JSON(201, gin.H{
 			"result":  1,
-			"message": "sig is empty",
+			"message": "signal is empty",
 		})
 		return
 	}
-	param["signal"] = signal
 	phone := c.PostForm("phone")
 	if phone == "" {
 		c.JSON(201, gin.H{
@@ -54,7 +55,7 @@ func (s *StudentRegisterController) Register(c *gin.Context) {
 	if address == "" {
 		c.JSON(201, gin.H{
 			"result":  1,
-			"message": "address  is empty",
+			"message": "address is empty",
 		})
 		return
 	}
@@ -63,21 +64,51 @@ func (s *StudentRegisterController) Register(c *gin.Context) {
 	if subject == "" {
 		c.JSON(201, gin.H{
 			"result":  1,
-			"message": "subject  is empty",
+			"message": "subject is empty",
 		})
 		return
 	}
 	param["subject"] = subject
+	timestamp := c.PostForm("timestamp")
+	times,err := strconv.Atoi(timestamp)
+	if err!= nil{
+		c.JSON(400, gin.H{
+			"result":  2,
+			"message": "change time error",
+		})
+		return
+	}
+	if time.Now().Unix()>int64(times){
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "timestamp is old",
+		})
+		return
+	}
+	if timestamp == "" {
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "timestamp is empty",
+		})
+		return
+	}
+	param["timestamp"] = timestamp
 	app_key := c.PostForm("appkey")
 	if app_key == "" {
 		c.JSON(201, gin.H{
 			"result":  1,
-			"message": "appkey  is empty",
+			"message": "appkey is empty",
 		})
 		return
 	}
 	appkey := s.Config.AppKeyMap[app_key]
-	param["appkey"] = appkey
+	if appkey == "" {
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "appkey is wrong",
+		})
+		return
+	}
 	if !middleware.CheckSign(appkey, param, signal) {
 		c.JSON(201, gin.H{
 			"result":  1,
@@ -85,7 +116,7 @@ func (s *StudentRegisterController) Register(c *gin.Context) {
 		})
 		return
 	}
-	err := s.StudentRegisterService.Register(name, phone, subject, address)
+	err = s.StudentRegisterService.Register(name, phone, subject, address)
 	if err != nil {
 		log.Errorf("studentRegister error %v", err)
 		c.JSON(400, gin.H{

@@ -28,7 +28,7 @@ redis:
   #实例列表
   instances:
     master:
-      url: server.redis.com:6379
+      url: 127.0.0.1:6379
       password: ""
 
 

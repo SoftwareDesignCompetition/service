@@ -11,3 +11,73 @@
 [INFO] [2019-10-13 09:12:58] [main.go:137] - Shutdown Server ...
 [ERROR] [2019-10-13 09:12:58] [main.go:130] - listen: http: Server closed
 [INFO] [2019-10-13 09:12:59] [main.go:144] - Server exist
+[INFO] [2019-10-13 10:29:03] [main.go:56] - Started Application at October 13, 2019 at 10:29am (CST)
+[INFO] [2019-10-13 10:29:03] [main.go:57] - Version: 6b2dd76-dirty
+[INFO] [2019-10-13 10:29:03] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:@tcp(localhost:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"server.redis.com:6379","Password":""}}},"AppKeyMap":{"newsadmin":"12ZUsa8Qdxwvg","newsoffice":"43eqybRm37NpJ","openaua":"232*dBg2\u0026CUK*","s1aY7ZYad6Xm":"a1QY7ZYad6Xm","s3aY7ZYad6Xm":"a24QY7ZYad6Xm","s5aY7ZYad6Xm":"a4xQY7ZYad6Xm","s9QY7ZYad6Xm":"s98Y7ZYad6Xm"}}
+[INFO] [2019-10-13 10:29:03] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-10-13 10:29:03] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-10-13 10:29:03] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-10-13 10:29:03] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-10-13 10:29:03] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-10-13 10:29:03] [prometheus.go:242] - resSz registered.
+[WARN] [2019-10-13 10:37:33] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&address=65497&appkey=s98Y7ZYad6Xm&name=465489&phone=3321&signal=f3b328e76675a39b2ab723eecfc3610b1c2446b7f3cf92fc8e9fb74f8a6a8305&subject=751679 sign f3b328e76675a39b2ab723eecfc3610b1c2446b7f3cf92fc8e9fb74f8a6a8305, result 05b221df4a58d35cd5a57cb20622e5733c694e9b11350d5ec6e07de6732deff5
+[INFO] [2019-10-13 10:38:51] [signal.go:16] - application[6b2dd76-dirty] get a signal interrupt
+[INFO] [2019-10-13 10:38:51] [main.go:137] - Shutdown Server ...
+[INFO] [2019-10-13 10:38:51] [main.go:144] - Server exist
+[INFO] [2019-10-13 10:39:40] [main.go:56] - Started Application at October 13, 2019 at 10:39am (CST)
+[INFO] [2019-10-13 10:39:40] [main.go:57] - Version: 43291af-dirty
+[INFO] [2019-10-13 10:39:40] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:@tcp(localhost:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"server.redis.com:6379","Password":""}}},"AppKeyMap":{"newsadmin":"12ZUsa8Qdxwvg","newsoffice":"43eqybRm37NpJ","openaua":"232*dBg2\u0026CUK*","s1aY7ZYad6Xm":"a1QY7ZYad6Xm","s3aY7ZYad6Xm":"a24QY7ZYad6Xm","s5aY7ZYad6Xm":"a4xQY7ZYad6Xm","s9QY7ZYad6Xm":"s98Y7ZYad6Xm"}}
+[INFO] [2019-10-13 10:39:40] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-10-13 10:39:40] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-10-13 10:39:40] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-10-13 10:39:40] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-10-13 10:39:40] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-10-13 10:39:40] [prometheus.go:242] - resSz registered.
+[WARN] [2019-10-13 10:39:45] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&address=65497&appkey=s98Y7ZYad6Xm&name=465489&phone=3321&subject=751679 sign f3b328e76675a39b2ab723eecfc3610b1c2446b7f3cf92fc8e9fb74f8a6a8305, result eadc7b4655c9ac9930b1f9d9a90e69d692bfa055c4a870a40c261aa498f0bd1e
+[INFO] [2019-10-13 10:41:56] [signal.go:16] - application[43291af-dirty] get a signal interrupt
+[INFO] [2019-10-13 10:41:56] [main.go:137] - Shutdown Server ...
+[INFO] [2019-10-13 10:41:56] [main.go:144] - Server exist
+[INFO] [2019-10-13 10:42:12] [main.go:56] - Started Application at October 13, 2019 at 10:42am (CST)
+[INFO] [2019-10-13 10:42:12] [main.go:57] - Version: 43291af-dirty
+[INFO] [2019-10-13 10:42:12] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:@tcp(localhost:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"server.redis.com:6379","Password":""}}},"AppKeyMap":{"newsadmin":"12ZUsa8Qdxwvg","newsoffice":"43eqybRm37NpJ","openaua":"232*dBg2\u0026CUK*","s1aY7ZYad6Xm":"a1QY7ZYad6Xm","s3aY7ZYad6Xm":"a24QY7ZYad6Xm","s5aY7ZYad6Xm":"a4xQY7ZYad6Xm","s9QY7ZYad6Xm":"s98Y7ZYad6Xm"}}
+[INFO] [2019-10-13 10:42:12] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-10-13 10:42:12] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-10-13 10:42:12] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-10-13 10:42:12] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-10-13 10:42:12] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-10-13 10:42:12] [prometheus.go:242] - resSz registered.
+[WARN] [2019-10-13 10:42:18] [auth.go:39] - sign string app_key=s9QY7ZYad6Xm&address=65497&name=465489&phone=3321&subject=751679 sign f3b328e76675a39b2ab723eecfc3610b1c2446b7f3cf92fc8e9fb74f8a6a8305, result 659bda4c649920ff32f3aefdd329b472cca0095154fa068f914ebab55e70ca8e
+[INFO] [2019-10-13 10:43:42] [signal.go:16] - application[43291af-dirty] get a signal interrupt
+[INFO] [2019-10-13 10:43:42] [main.go:137] - Shutdown Server ...
+[INFO] [2019-10-13 10:43:42] [main.go:144] - Server exist
+[INFO] [2019-10-13 10:43:51] [main.go:56] - Started Application at October 13, 2019 at 10:43am (CST)
+[INFO] [2019-10-13 10:43:51] [main.go:57] - Version: 43291af-dirty
+[INFO] [2019-10-13 10:43:51] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:@tcp(localhost:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"server.redis.com:6379","Password":""}}},"AppKeyMap":{"newsadmin":"12ZUsa8Qdxwvg","newsoffice":"43eqybRm37NpJ","openaua":"232*dBg2\u0026CUK*","s1aY7ZYad6Xm":"a1QY7ZYad6Xm","s3aY7ZYad6Xm":"a24QY7ZYad6Xm","s5aY7ZYad6Xm":"a4xQY7ZYad6Xm","s9QY7ZYad6Xm":"s98Y7ZYad6Xm"}}
+[INFO] [2019-10-13 10:43:51] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-10-13 10:43:51] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-10-13 10:43:51] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-10-13 10:43:51] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-10-13 10:43:51] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-10-13 10:43:51] [prometheus.go:242] - resSz registered.
+[WARN] [2019-10-13 10:43:56] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&address=65497&name=465489&phone=3321&subject=751679 sign f3b328e76675a39b2ab723eecfc3610b1c2446b7f3cf92fc8e9fb74f8a6a8305, result c64b6c941638ad3dcb663671980fb5f68045c8fb565dc701482644fa29849e47
+[ERROR] [2019-10-13 10:45:54] [cache.go:23] - ping cache error dial tcp: i/o timeout
+[ERROR] [2019-10-13 10:45:54] [cache.go:53] - init cache master error: dial tcp: i/o timeout
+[INFO] [2019-10-13 10:45:54] [logger.go:97] - [GIN] 2019/10/13 - 10:45:54 |[97;41m 500 [0m|    5.0062891s |             ::1 |[97;46m  POST [0m    /v1/student_register
+
+[INFO] [2019-10-13 10:47:06] [signal.go:16] - application[43291af-dirty] get a signal interrupt
+[INFO] [2019-10-13 10:47:06] [main.go:137] - Shutdown Server ...
+[INFO] [2019-10-13 10:47:06] [main.go:144] - Server exist
+[INFO] [2019-10-13 11:10:25] [main.go:56] - Started Application at October 13, 2019 at 11:10am (CST)
+[INFO] [2019-10-13 11:10:25] [main.go:57] - Version: 43291af-dirty
+[INFO] [2019-10-13 11:10:25] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:@tcp(localhost:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"127.0.0.1:6379","Password":""}}},"AppKeyMap":{"newsadmin":"12ZUsa8Qdxwvg","newsoffice":"43eqybRm37NpJ","openaua":"232*dBg2\u0026CUK*","s1aY7ZYad6Xm":"a1QY7ZYad6Xm","s3aY7ZYad6Xm":"a24QY7ZYad6Xm","s5aY7ZYad6Xm":"a4xQY7ZYad6Xm","s9QY7ZYad6Xm":"s98Y7ZYad6Xm"}}
+[INFO] [2019-10-13 11:10:25] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-10-13 11:10:25] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-10-13 11:10:25] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-10-13 11:10:25] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-10-13 11:10:25] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-10-13 11:10:25] [prometheus.go:242] - resSz registered.
+[WARN] [2019-10-13 11:12:03] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&address=65497&name=465489&phone=3321&subject=751679&timestamp=1570939840 sign 2b9dad70de0a607c5fba11b541d605a56ce80ee437bbc37ba04fcc268917fab0, result 5547451226026df8d92c226f683224c00cdbd6d1f9270f1d0dc34e37afc1d0dd
+[INFO] [2019-10-13 11:12:46] [cache.go:26] - ping cache PONG
+[INFO] [2019-10-13 11:17:19] [signal.go:16] - application[43291af-dirty] get a signal interrupt
+[INFO] [2019-10-13 11:17:19] [main.go:137] - Shutdown Server ...
+[INFO] [2019-10-13 11:17:19] [main.go:144] - Server exist
