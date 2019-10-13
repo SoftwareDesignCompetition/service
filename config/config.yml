@@ -21,10 +21,7 @@ db:
   instances:
     master:
       driver: mysql
-      url: root:V4MW7Pha42Au@tcp(172.31.233.89:3306)/token_bank?timeout=12s&readTimeout=12s&writeTimeout=5s&parseTime=true&charset=utf8mb4
-    lock_master:
-      driver: mysql
-      url: root:V4MW7Pha42Au@tcp(172.31.233.89:3306)/token_bank?timeout=12s&readTimeout=12s&writeTimeout=5s&parseTime=true&charset=utf8mb4
+      url: root:@tcp(localhost:3306)/token_bank?timeout=12s&readTimeout=12s&writeTimeout=5s&parseTime=true&charset=utf8mb4
 
 # 缓存配置
 redis:
@@ -34,21 +31,12 @@ redis:
       url: server.redis.com:6379
       password: ""
 
-# 服务监听地址
-gidaddr: 'http://gid.mytokenpocket.vip'
-bosnodechecktaskswitch: 1
-bosaccountresourcechecktaskswitch: 1
-eosnodechecktaskswitch: 1
-eosaccountresourcechecktaskswitch: 1
-eosaccountrexchecktaskswitch: 1
-alertserveraddr: 'http://alert.mytokenpocket.vip'
-eosendpoint: 'http://openapi.eos.ren'
-#1秒 CPU
-eoscpuavailable: 10000
-#1M NET
-eosnetavailable: 11658
-bosendpoint: 'http://bospush.mytokenpocket.vip'
-#1秒 CPU
-boscpuavailable: 10000
-#1M NET
-bosnetavailable: 11658
+
+appkeymap:
+  s9QY7ZYad6Xm: 's98Y7ZYad6Xm'
+  s3aY7ZYad6Xm: 'a24QY7ZYad6Xm'
+  s1aY7ZYad6Xm: 'a1QY7ZYad6Xm'
+  s5aY7ZYad6Xm: 'a4xQY7ZYad6Xm'
+  newsadmin: '12ZUsa8Qdxwvg'
+  newsoffice: '43eqybRm37NpJ'
+  openaua: '232*dBg2&CUK*'

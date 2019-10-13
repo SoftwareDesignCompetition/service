@@ -107,7 +107,7 @@ func main() {
 		})
 	}
 	studentRegisterController, _ := controller.NewStudentRegisterController(appContext)
-	router.GET("/v1/student_register", studentRegisterController.Register)
+	router.POST("/v1/student_register", studentRegisterController.Register)
 
 	taskManager, err := task.NewTaskManager(&appConfig, appContext)
 	if err != nil {

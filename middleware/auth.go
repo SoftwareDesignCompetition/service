@@ -1,7 +1,10 @@
 package middleware
 
 import (
+	"crypto/sha256"
+	"fmt"
 	"github.com/gin-gonic/gin"
+	"sort"
 	"time"
 
 	log "github.com/cihub/seelog"
@@ -26,4 +29,29 @@ func Auth() gin.HandlerFunc {
 		status := c.Writer.Status()
 		log.Info(status)
 	}
+}
+
+func CheckSign(appKey string, params map[string]interface{}, sign string) bool {
+	result, needSignStr := DoSign(appKey, params)
+	if result == sign {
+		return true
+	} else {
+		log.Warnf("sign string %v sign %v, result %v", needSignStr, sign, result)
+	}
+	return false
+}
+
+func DoSign(appKey string, params map[string]interface{}) (string, string) {
+	var keys []string
+	for k, _ := range params {
+		keys = append(keys, k)
+	}
+	sort.Strings(keys)
+	var needSignStr = "app_key=" + appKey
+	for _, k := range keys {
+		needSignStr += "&" + k + "=" + fmt.Sprintf("%v", params[k])
+	}
+	h := sha256.New()
+	h.Write([]byte(needSignStr))
+	return fmt.Sprintf("%x", h.Sum(nil)), needSignStr
 }

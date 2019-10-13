@@ -14,7 +14,6 @@ func NewStudentRegisterService(context *AppContext) (*StudentRegisterService, er
 	}
 	return applicationService, nil
 }
-func (s *StudentRegisterService) Register() error {
-	return s.StudentRegisterModel.Register()
+func (s *StudentRegisterService) Register(name, phone, subject, address string) error {
+	return s.StudentRegisterModel.Register(name, phone, subject, address)
 }
-

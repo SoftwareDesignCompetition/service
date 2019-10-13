@@ -1,0 +1,12 @@
+[INFO] [2019-10-03 10:26:16] [main.go:56] - Started Application at October 3, 2019 at 10:26am (CST)
+[INFO] [2019-10-03 10:26:16] [main.go:57] - Version: ${}
+[INFO] [2019-10-03 10:26:16] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:V4MW7Pha42Au@tcp(172.31.233.89:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"server.redis.com:6379","Password":""}}}}
+[INFO] [2019-10-03 10:26:16] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-10-03 10:26:16] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-10-03 10:26:16] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-10-03 10:26:16] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-10-03 10:26:16] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-10-03 10:26:16] [prometheus.go:242] - resSz registered.
+[INFO] [2019-10-03 10:28:51] [signal.go:16] - application[${}] get a signal interrupt
+[INFO] [2019-10-03 10:28:51] [main.go:137] - Shutdown Server ...
+[INFO] [2019-10-03 10:28:51] [main.go:144] - Server exist
