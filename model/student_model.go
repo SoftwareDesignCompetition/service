@@ -1,10 +1,12 @@
 package model
 
 import (
+	"fmt"
 	log "github.com/cihub/seelog"
 	"github.com/service/config"
 	"github.com/service/rediskey"
 	"github.com/tb_common/cache"
+	"strconv"
 )
 
 type StudentModel struct {
@@ -46,6 +48,16 @@ func (s *StudentModel) Register(student Student) error {
 		log.Errorf("add grade err, %v", err)
 		return err
 	}
+	_, err = s.GetRedisMaster().HSet(rediskey.GetStudentRedisKey(), "user:"+student.Phone+":good", 0).Result()
+	if err != nil {
+		log.Errorf("add grade err, %v", err)
+		return err
+	}
+	_, err = s.GetRedisMaster().HSet(rediskey.GetStudentRedisKey(), "user:"+student.Phone+":own", 0).Result()
+	if err != nil {
+		log.Errorf("add grade err, %v", err)
+		return err
+	}
 	return nil
 }
 
@@ -63,7 +75,21 @@ func (s *StudentModel) GetAllPhone() ([]string, error) {
 		phone := i[5:16]
 		resp = append(resp, phone)
 	}
+	resp = s.RemoveRepByMap(resp)
 	return resp, nil
+}
+
+func (s *StudentModel) RemoveRepByMap(slc []string) []string {
+	result := []string{}
+	tempMap := map[string]byte{}
+	for _, e := range slc {
+		l := len(tempMap)
+		tempMap[e] = 0
+		if len(tempMap) != l {
+			result = append(result, e)
+		}
+	}
+	return result
 }
 
 func (s *StudentModel) GetStudentFormPhone(phone string) (Student, error) {
@@ -90,12 +116,34 @@ func (s *StudentModel) GetStudentFormPhone(phone string) (Student, error) {
 		log.Errorf("get grade err, %v", err)
 		return Student{}, err
 	}
+	good, err := s.GetRedisMaster().HGet(rediskey.GetStudentRedisKey(), "user:"+phone+":good").Result()
+	if err != nil {
+		log.Errorf("get good err, %v", err)
+		return Student{}, err
+	}
+	good1, err := strconv.Atoi(good)
+	if err != nil {
+		log.Errorf("change good err, %v", err)
+		return Student{}, err
+	}
+	own, err := s.GetRedisMaster().HGet(rediskey.GetStudentRedisKey(), "user:"+phone+":own").Result()
+	if err != nil {
+		log.Errorf("get own err, %v", err)
+		return Student{}, err
+	}
+	own1, err := strconv.Atoi(own)
+	if err != nil {
+		log.Errorf("change own err, %v", err)
+		return Student{}, err
+	}
 	return Student{
 		Phone:   phone,
 		Name:    name,
 		Address: address,
 		Subject: subject,
 		Grade:   grade,
+		Good:    good1,
+		Own:     own1,
 	}, nil
 }
 
@@ -195,6 +243,42 @@ func (s *StudentModel) ChangeName(phone, name string) error {
 	if err != nil {
 		log.Errorf("change name err, %v", err)
 		return err
+	}
+	return nil
+}
+
+func (s *StudentModel) AddEvaluate(phone string, evaluate bool) error {
+	own, err := s.GetRedisMaster().HGet(rediskey.GetStudentRedisKey(), "user:"+phone+":own").Result()
+	if err != nil {
+		log.Errorf("get own err, %v", err)
+		return err
+	}
+	own1, err := strconv.Atoi(own)
+	if err != nil {
+		log.Errorf("change own err, %v", err)
+		return err
+	}
+	_, err = s.GetRedisMaster().HSet(rediskey.GetStudentRedisKey(), "user:"+phone+":own", fmt.Sprint(own1+1)).Result()
+	if err != nil {
+		log.Errorf("set own err, %v", err)
+		return err
+	}
+	if evaluate {
+		good, err := s.GetRedisMaster().HGet(rediskey.GetStudentRedisKey(), "user:"+phone+":good").Result()
+		if err != nil {
+			log.Errorf("get good err, %v", err)
+			return err
+		}
+		good1, err := strconv.Atoi(good)
+		if err != nil {
+			log.Errorf("change good err, %v", err)
+			return err
+		}
+		_, err = s.GetRedisMaster().HSet(rediskey.GetStudentRedisKey(), "user:"+phone+":good", fmt.Sprint(good1+1)).Result()
+		if err != nil {
+			log.Errorf("set good err, %v", err)
+			return err
+		}
 	}
 	return nil
 }

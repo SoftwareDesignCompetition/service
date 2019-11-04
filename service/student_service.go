@@ -45,3 +45,7 @@ func (s *StudentService) ChangeSubject(phone, subject string) error {
 func (s *StudentService) ChangeName(phone, name string) error {
 	return s.StudentModel.ChangeName(phone, name)
 }
+
+func (s *StudentService) AddEvaluate(phone string, evaluate bool) error {
+	return s.StudentModel.AddEvaluate(phone, evaluate)
+}

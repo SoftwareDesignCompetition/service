@@ -79,15 +79,21 @@ func main() {
 	if err != nil {
 		log.Errorf("init studentModel error, %v", err)
 	}
+	teacherModel, err := model.NewTeacherModel(&appConfig)
+	if err != nil {
+		log.Errorf("init teacherModel error, %v", err)
+	}
 
 	appContext := &service.AppContext{
 		Config:   &appConfig,
 		Services: map[string]interface{}{},
 		Models: map[string]interface{}{
 			"studentModel": studentModel,
+			"teacherModel": teacherModel,
 		},
 	}
 	appContext.Services["studentService"], _ = service.NewStudentService(appContext)
+	appContext.Services["teacherService"], _ = service.NewTeacherService(appContext)
 
 	authorized := router.Group("/v1/")
 	authorized.Use(middleware.Auth())
@@ -114,6 +120,24 @@ func main() {
 	router.POST("/v1/student/ChangeGrade", studentController.ChangeGrade)
 	router.POST("/v1/student/ChangeSubject", studentController.ChangeSubject)
 	router.POST("/v1/student/ChangeName", studentController.ChangeName)
+	router.POST("/v1/student/AddEvaluate", studentController.AddEvaluate)
+
+	teacherConrtroller,_ := controller.NewTeacherController(appContext)
+	router.POST("/v1/teacher/Register", teacherConrtroller.Register)
+	router.POST("/v1/teacher/ChangePhone", teacherConrtroller.ChangePhone)
+	router.POST("/v1/teacher/ChangeAddress", teacherConrtroller.ChangeAddress)
+	router.POST("/v1/teacher/ChangeGrade", teacherConrtroller.ChangeGrade)
+	router.POST("/v1/teacher/ChangeTeGrade", teacherConrtroller.ChangeTeGrade)
+	router.POST("/v1/teacher/ChangeName", teacherConrtroller.ChangeName)
+	router.POST("/v1/teacher/ChangeSchool", teacherConrtroller.ChangeSchool)
+	router.POST("/v1/teacher/ChangeGender", teacherConrtroller.ChangeGender)
+	router.POST("/v1/teacher/ChangeTimes", teacherConrtroller.ChangeTimes)
+	router.POST("/v1/teacher/ChangeSalary", teacherConrtroller.ChangeSalary)
+	router.POST("/v1/teacher/ChangeMajor", teacherConrtroller.ChangeMajor)
+	router.POST("/v1/teacher/ChangeStatus", teacherConrtroller.ChangeStatus)
+	router.POST("/v1/teacher/AddEvaluate", teacherConrtroller.AddEvaluate)
+	router.POST("/v1/teacher/GetTeacher", teacherConrtroller.GetTeacher)
+
 
 	taskManager, err := task.NewTaskManager(&appConfig, appContext)
 	if err != nil {

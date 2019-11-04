@@ -9,3 +9,7 @@ import (
 func GetStudentRedisKey() string {
 	return fmt.Sprintf("student_key")
 }
+
+func GetTeacherRedisKey() string {
+	return fmt.Sprintf("teacher_key")
+}

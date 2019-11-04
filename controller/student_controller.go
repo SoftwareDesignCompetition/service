@@ -713,3 +713,99 @@ func (s *StudentController) ChangeName(c *gin.Context) {
 	})
 	return
 }
+
+func (s *StudentController) AddEvaluate(c *gin.Context) {
+	param := map[string]interface{}{}
+	signal := c.PostForm("signal")
+	if signal == "" {
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "signal is empty",
+		})
+		return
+	}
+	phone := c.PostForm("phone")
+	if phone == "" {
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "phone is empty",
+		})
+		return
+	}
+	param["phone"] = phone
+	timestamp := c.PostForm("timestamp")
+	times, err := strconv.Atoi(timestamp)
+	if err != nil {
+		log.Error("change time error")
+		c.JSON(400, gin.H{
+			"result":  2,
+			"message": "change time error",
+		})
+		return
+	}
+	if time.Now().Unix() > int64(times) {
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "timestamp is old",
+		})
+		return
+	}
+	if timestamp == "" {
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "timestamp is empty",
+		})
+		return
+	}
+	param["timestamp"] = timestamp
+	app_key := c.PostForm("appkey")
+	if app_key == "" {
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "appkey is empty",
+		})
+		return
+	}
+	appkey := s.Config.AppKeyMap[app_key]
+	if appkey == "" {
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "appkey is wrong",
+		})
+		return
+	}
+	evaluate := c.PostForm("evaluate")
+	if evaluate == "" {
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "name is empty",
+		})
+		return
+	}
+	param["evaluate"] = evaluate
+	if !middleware.CheckSign(appkey, param, signal) {
+		c.JSON(201, gin.H{
+			"result":  1,
+			"message": "signal is wrong",
+		})
+		return
+	}
+	if evaluate == "True" {
+		err = s.StudentService.AddEvaluate(phone, true)
+	} else {
+		err = s.StudentService.AddEvaluate(phone, false)
+	}
+	if err != nil {
+		log.Error("Add Evaluate error")
+		c.JSON(400, gin.H{
+			"result":  2,
+			"message": "Add Evaluate error",
+		})
+		return
+	}
+	c.JSON(200, gin.H{
+		"result":  0,
+		"message": "success",
+	})
+	return
+}

@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0615e20f-2346-497e-9b52-9c8529f47ff9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controller/teacher_controller.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/teacher_model.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/teacher_service.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/a.s" beforeDir="false" afterPath="$PROJECT_DIR$/a.s" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/student_controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/controller/student_controller.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/console.log.2019-13-10" beforeDir="false" afterPath="$PROJECT_DIR$/logs/console.log.2019-13-10" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/base_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/base_model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/student_model.go" beforeDir="false" afterPath="$PROJECT_DIR$/model/student_model.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rediskey/redis_keys.go" beforeDir="false" afterPath="$PROJECT_DIR$/rediskey/redis_keys.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/student_service.go" beforeDir="false" afterPath="$PROJECT_DIR$/service/student_service.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signal.go" beforeDir="false" afterPath="$PROJECT_DIR$/signal.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task/task_manager.go" beforeDir="false" afterPath="$PROJECT_DIR$/task/task_manager.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,60 +29,91 @@
     </favorites_list>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="113" column="40" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="40" />
+            <state relative-caret-position="317">
+              <caret line="138" column="72" selection-start-line="138" selection-start-column="72" selection-end-line="138" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controller/student_controller.go">
+        <entry file="file://$PROJECT_DIR$/controller/teacher_controller.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="608" column="33" selection-start-line="608" selection-start-column="33" selection-end-line="608" selection-end-column="33" />
+            <state relative-caret-position="298">
+              <caret line="1416" column="37" selection-start-line="1416" selection-start-column="37" selection-end-line="1416" selection-end-column="37" />
               <folding>
+                <element signature="n#!!block;n#Register#0" />
                 <element signature="n#!!block;n#ChangePhone#0" />
                 <element signature="n#!!block;n#ChangeAddress#0" />
                 <element signature="n#!!block;n#ChangeGrade#0" />
-                <element signature="n#!!block;n#ChangeName#0" />
+                <element signature="n#!!block;n#ChangeSubject#0" />
+                <element signature="n#!!block;n#ChangeMajor#0" />
+                <element signature="n#!!block;n#ChangeStatus#0" />
+                <element signature="n#!!block;n#AddEvaluate#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/service/student_service.go">
+        <entry file="file://$PROJECT_DIR$/service/teacher_service.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
-              <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+            <state relative-caret-position="355">
+              <caret line="77" column="35" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="35" />
               <folding>
                 <element signature="e#17#55#0" expanded="true" />
+                <element signature="n#!!block;n#GetAllPhone#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/student_model.go">
+        <entry file="file://$PROJECT_DIR$/model/teacher_model.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
+            <state relative-caret-position="-139">
+              <caret line="614" column="9" lean-forward="true" selection-start-line="614" selection-start-column="9" selection-end-line="614" selection-end-column="9" />
               <folding>
-                <element signature="e#15#146#0" expanded="true" />
+                <element signature="n#!!block;n#NewTeacherModel#0" />
+                <element signature="e#714#769#0" />
+                <element signature="e#910#968#0" />
+                <element signature="e#1109#1167#0" />
+                <element signature="e#1304#1360#0" />
+                <element signature="e#1499#1556#0" />
+                <element signature="e#1695#1752#0" />
+                <element signature="e#1889#1945#0" />
+                <element signature="e#2084#2141#0" />
+                <element signature="e#2278#2334#0" />
+                <element signature="e#2460#2517#0" />
+                <element signature="e#2641#2696#0" />
+                <element signature="e#2819#2873#0" />
+                <element signature="e#3014#3072#0" />
+                <element signature="n#!!block;n#ChangePhone#0" />
+                <element signature="n#!!block;n#ChangeAddress#0" />
+                <element signature="n#!!block;n#ChangeGrade#0" />
+                <element signature="n#!!block;n#ChangeSubject#0" />
+                <element signature="n#!!block;n#ChangeTeGrade#0" />
+                <element signature="n#!!block;n#ChangeName#0" />
+                <element signature="n#!!block;n#ChangeSchool#0" />
+                <element signature="n#!!block;n#ChangeGender#0" />
+                <element signature="n#!!block;n#ChangeTimes#0" />
+                <element signature="n#!!block;n#ChangeSalary#0" />
+                <element signature="n#!!block;n#ChangeMajor#0" />
+                <element signature="n#!!block;n#AddEvaluate#0" />
+                <element signature="n#!!block;n#gcd#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logs/console.log.2019-13-10">
+        <entry file="file://$PROJECT_DIR$/model/base_model.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="175" column="25" selection-start-line="175" selection-start-column="25" selection-end-line="179" selection-end-column="80" />
+            <state relative-caret-position="133">
+              <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -117,16 +145,19 @@
         <option value="$PROJECT_DIR$/middleware/auth.go" />
         <option value="$PROJECT_DIR$/config/config.go" />
         <option value="$PROJECT_DIR$/service/student_register_service.go" />
-        <option value="$PROJECT_DIR$/rediskey/redis_keys.go" />
         <option value="$PROJECT_DIR$/model/student_register_model.go" />
         <option value="$PROJECT_DIR$/model/base_cache_model.go" />
-        <option value="$PROJECT_DIR$/config/config.yml" />
         <option value="$PROJECT_DIR$/controller/student_register_controller.go" />
-        <option value="$PROJECT_DIR$/model/base_model.go" />
-        <option value="$PROJECT_DIR$/main.go" />
-        <option value="$PROJECT_DIR$/model/student_model.go" />
-        <option value="$PROJECT_DIR$/controller/student_controller.go" />
+        <option value="$PROJECT_DIR$/config/config.yml" />
         <option value="$PROJECT_DIR$/service/student_service.go" />
+        <option value="$PROJECT_DIR$/rediskey/redis_keys.go" />
+        <option value="$PROJECT_DIR$/controller/student_controller.go" />
+        <option value="$PROJECT_DIR$/model/base_model.go" />
+        <option value="$PROJECT_DIR$/model/student_model.go" />
+        <option value="$PROJECT_DIR$/service/teacher_service.go" />
+        <option value="$PROJECT_DIR$/model/teacher_model.go" />
+        <option value="$PROJECT_DIR$/controller/teacher_controller.go" />
+        <option value="$PROJECT_DIR$/main.go" />
       </list>
     </option>
   </component>
@@ -231,9 +262,10 @@
     </option>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1293" height="813" extended-state="7" />
+    <frame x="-6" y="-6" width="1293" height="813" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.37975708" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49758455" visible="true" weight="0.16923077" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.50121063" side_tool="true" weight="0.2534413" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -246,7 +278,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32991204" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.44134897" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.17888562" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -306,13 +338,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="26" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/base_controller.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -415,13 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/base_model.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Go/src/builtin/builtin.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
@@ -436,20 +454,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/rediskey/redis_keys.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/console.log.2019-13-10">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
@@ -457,43 +461,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/student_controller.go">
+    <entry file="file://$PROJECT_DIR$/config/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="608" column="33" selection-start-line="608" selection-start-column="33" selection-end-line="608" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!block;n#ChangePhone#0" />
-            <element signature="n#!!block;n#ChangeAddress#0" />
-            <element signature="n#!!block;n#ChangeGrade#0" />
-            <element signature="n#!!block;n#ChangeName#0" />
-          </folding>
+        <state relative-caret-position="779">
+          <caret line="41" column="26" selection-start-line="41" selection-start-column="26" selection-end-line="41" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/github.com/go-redis/redis/commands.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17005">
+          <caret line="901" column="18" selection-start-line="901" selection-start-column="18" selection-end-line="901" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/service/student_service.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
-          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+        <state relative-caret-position="203">
+          <caret line="20" selection-start-line="20" selection-end-line="22" selection-end-column="1" />
           <folding>
             <element signature="e#17#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controller/base_controller.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-76">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/student_controller.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="333" column="19" selection-start-line="332" selection-end-line="345" selection-end-column="10" />
+          <folding>
+            <element signature="e#20#206#0" expanded="true" />
+            <element signature="n#!!block;n#ChangeAddress#0" />
+            <element signature="n#!!block;n#ChangeGrade#0" />
+            <element signature="n#!!block;n#ChangeSubject#0" />
+            <element signature="n#!!block;n#ChangeName#0" />
+            <element signature="n#!!block;n#AddEvaluate#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rediskey/redis_keys.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/model/student_model.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="428">
-          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
+        <state relative-caret-position="32">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/base_model.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/teacher_model.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-139">
+          <caret line="614" column="9" lean-forward="true" selection-start-line="614" selection-start-column="9" selection-end-line="614" selection-end-column="9" />
           <folding>
-            <element signature="e#15#146#0" expanded="true" />
+            <element signature="n#!!block;n#NewTeacherModel#0" />
+            <element signature="e#714#769#0" />
+            <element signature="e#910#968#0" />
+            <element signature="e#1109#1167#0" />
+            <element signature="e#1304#1360#0" />
+            <element signature="e#1499#1556#0" />
+            <element signature="e#1695#1752#0" />
+            <element signature="e#1889#1945#0" />
+            <element signature="e#2084#2141#0" />
+            <element signature="e#2278#2334#0" />
+            <element signature="e#2460#2517#0" />
+            <element signature="e#2641#2696#0" />
+            <element signature="e#2819#2873#0" />
+            <element signature="e#3014#3072#0" />
+            <element signature="n#!!block;n#ChangePhone#0" />
+            <element signature="n#!!block;n#ChangeAddress#0" />
+            <element signature="n#!!block;n#ChangeGrade#0" />
+            <element signature="n#!!block;n#ChangeSubject#0" />
+            <element signature="n#!!block;n#ChangeTeGrade#0" />
+            <element signature="n#!!block;n#ChangeName#0" />
+            <element signature="n#!!block;n#ChangeSchool#0" />
+            <element signature="n#!!block;n#ChangeGender#0" />
+            <element signature="n#!!block;n#ChangeTimes#0" />
+            <element signature="n#!!block;n#ChangeSalary#0" />
+            <element signature="n#!!block;n#ChangeMajor#0" />
+            <element signature="n#!!block;n#AddEvaluate#0" />
+            <element signature="n#!!block;n#gcd#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/service/teacher_service.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="77" column="35" selection-start-line="77" selection-start-column="25" selection-end-line="77" selection-end-column="35" />
+          <folding>
+            <element signature="e#17#55#0" expanded="true" />
+            <element signature="n#!!block;n#GetAllPhone#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/teacher_controller.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="1416" column="37" selection-start-line="1416" selection-start-column="37" selection-end-line="1416" selection-end-column="37" />
+          <folding>
+            <element signature="n#!!block;n#Register#0" />
+            <element signature="n#!!block;n#ChangePhone#0" />
+            <element signature="n#!!block;n#ChangeAddress#0" />
+            <element signature="n#!!block;n#ChangeGrade#0" />
+            <element signature="n#!!block;n#ChangeSubject#0" />
+            <element signature="n#!!block;n#ChangeMajor#0" />
+            <element signature="n#!!block;n#ChangeStatus#0" />
+            <element signature="n#!!block;n#AddEvaluate#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="113" column="40" selection-start-line="113" selection-start-column="29" selection-end-line="113" selection-end-column="40" />
+        <state relative-caret-position="317">
+          <caret line="138" column="72" selection-start-line="138" selection-start-column="72" selection-end-line="138" selection-end-column="72" />
         </state>
       </provider>
     </entry>
