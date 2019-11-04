@@ -142,17 +142,17 @@ func (s *TeacherModel) ChangePhone(phone, new_phone string) error {
 		log.Errorf("del address err, %v", err)
 		return err
 	}
-	tegrade, err := s.GetRedisMaster().HGet(rediskey.GetTeacherRedisKey(), "user:"+phone+":tegrade").Result()
+	tegrade, err := s.GetRedisMaster().HGet(rediskey.GetTeacherRedisKey(), "user:"+phone+":teGrade").Result()
 	if err != nil {
 		log.Errorf("get tegrade err, %v", err)
 		return err
 	}
-	_, err = s.GetRedisMaster().HSet(rediskey.GetTeacherRedisKey(), "user:"+new_phone+":tegrade", tegrade).Result()
+	_, err = s.GetRedisMaster().HSet(rediskey.GetTeacherRedisKey(), "user:"+new_phone+":teGrade", tegrade).Result()
 	if err != nil {
 		log.Errorf("set tegrade err, %v", err)
 		return err
 	}
-	_, err = s.GetRedisMaster().HDel(rediskey.GetTeacherRedisKey(), "user:"+phone+":tegrade").Result()
+	_, err = s.GetRedisMaster().HDel(rediskey.GetTeacherRedisKey(), "user:"+phone+":teGrade").Result()
 	if err != nil {
 		log.Errorf("del tegrade err, %v", err)
 		return err
@@ -323,7 +323,7 @@ func (s *TeacherModel) ChangeSubject(phone, subject string) error {
 }
 
 func (s *TeacherModel) ChangeTeGrade(phone, tegrade string) error {
-	_, err := s.GetRedisMaster().HSet(rediskey.GetTeacherRedisKey(), "user:"+phone+":tegrade", tegrade).Result()
+	_, err := s.GetRedisMaster().HSet(rediskey.GetTeacherRedisKey(), "user:"+phone+":teGrade", tegrade).Result()
 	if err != nil {
 		log.Errorf("change tegrade err, %v", err)
 		return err

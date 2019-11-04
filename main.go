@@ -135,6 +135,7 @@ func main() {
 	router.POST("/v1/teacher/ChangeSalary", teacherConrtroller.ChangeSalary)
 	router.POST("/v1/teacher/ChangeMajor", teacherConrtroller.ChangeMajor)
 	router.POST("/v1/teacher/ChangeStatus", teacherConrtroller.ChangeStatus)
+	router.POST("/v1/teacher/ChangeSubject", teacherConrtroller.ChangeSubject)
 	router.POST("/v1/teacher/AddEvaluate", teacherConrtroller.AddEvaluate)
 	router.POST("/v1/teacher/GetTeacher", teacherConrtroller.GetTeacher)
 

@@ -1,0 +1,99 @@
+[INFO] [2019-11-04 20:25:28] [main.go:56] - Started Application at November 4, 2019 at 8:25pm (CST)
+[INFO] [2019-11-04 20:25:28] [main.go:57] - Version: 2bd7e6b-dirty
+[INFO] [2019-11-04 20:25:28] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:@tcp(localhost:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"127.0.0.1:6379","Password":""}}},"AppKeyMap":{"newsadmin":"12ZUsa8Qdxwvg","newsoffice":"43eqybRm37NpJ","openaua":"232*dBg2\u0026CUK*","s1aY7ZYad6Xm":"a1QY7ZYad6Xm","s3aY7ZYad6Xm":"a24QY7ZYad6Xm","s5aY7ZYad6Xm":"a4xQY7ZYad6Xm","s9QY7ZYad6Xm":"s98Y7ZYad6Xm"}}
+[INFO] [2019-11-04 20:25:28] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-11-04 20:25:28] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-11-04 20:25:28] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-11-04 20:25:28] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-11-04 20:25:28] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-11-04 20:25:28] [prometheus.go:242] - resSz registered.
+[WARN] [2019-11-04 20:28:01] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&address=123&grade=6&name=11111111111&phone=15874732245&subject=6&timestamp=1572877664 sign 31bf092d39be559cd4cc7f42057c59f9e91a2892e70c5bdfb8861acfce376015, result 9c6d4d88c079fe424276b8af0f9592ecf3576ca62cb51a9f2f82a3d5cefd0dd7
+[INFO] [2019-11-04 20:28:31] [cache.go:26] - ping cache PONG
+[WARN] [2019-11-04 20:34:48] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&phone=15874732245&timestamp=1572877664 sign 9c6d4d88c079fe424276b8af0f9592ecf3576ca62cb51a9f2f82a3d5cefd0dd7, result 89233b29752aafaccc754e26280a8ba80bf3e1a5ae4d5ae72e0720cc14814ac2
+[WARN] [2019-11-04 20:35:02] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&phone=15874732245&timestamp=1572877664 sign 89233b29
+752aafaccc754e26280a8ba80bf3e1a5ae4d5ae72e0720cc14814ac2, result 89233b29752aafaccc754e26280a8ba80bf3e1a5ae4d5ae72e0720cc14814ac2
+[INFO] [2019-11-04 20:35:22] [logger.go:97] - [GIN] 2019/11/04 - 20:35:22 |[97;42m 200 [0m|    3.0006443s |             ::1 |[97;46m  POST [0m    /v1/student/GetStudent
+
+[INFO] [2019-11-04 20:37:07] [signal.go:16] - application[2bd7e6b-dirty] get a signal interrupt
+[INFO] [2019-11-04 20:37:07] [main.go:167] - Shutdown Server ...
+[INFO] [2019-11-04 20:37:07] [main.go:174] - Server exist
+[INFO] [2019-11-04 20:37:17] [main.go:56] - Started Application at November 4, 2019 at 8:37pm (CST)
+[INFO] [2019-11-04 20:37:17] [main.go:57] - Version: 50955a8-dirty
+[INFO] [2019-11-04 20:37:17] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:@tcp(localhost:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"127.0.0.1:6379","Password":""}}},"AppKeyMap":{"newsadmin":"12ZUsa8Qdxwvg","newsoffice":"43eqybRm37NpJ","openaua":"232*dBg2\u0026CUK*","s1aY7ZYad6Xm":"a1QY7ZYad6Xm","s3aY7ZYad6Xm":"a24QY7ZYad6Xm","s5aY7ZYad6Xm":"a4xQY7ZYad6Xm","s9QY7ZYad6Xm":"s98Y7ZYad6Xm"}}
+[INFO] [2019-11-04 20:37:17] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-11-04 20:37:17] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-11-04 20:37:17] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-11-04 20:37:17] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-11-04 20:37:17] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-11-04 20:37:17] [prometheus.go:242] - resSz registered.
+[INFO] [2019-11-04 20:37:22] [cache.go:26] - ping cache PONG
+[INFO] [2019-11-04 20:37:22] [student_controller.go:232] - {15874732245 11111111111 6 123 6 0 0}
+[INFO] [2019-11-04 20:37:45] [signal.go:16] - application[50955a8-dirty] get a signal interrupt
+[INFO] [2019-11-04 20:37:45] [main.go:167] - Shutdown Server ...
+[INFO] [2019-11-04 20:37:45] [main.go:174] - Server exist
+[INFO] [2019-11-04 20:37:57] [main.go:56] - Started Application at November 4, 2019 at 8:37pm (CST)
+[INFO] [2019-11-04 20:37:57] [main.go:57] - Version: 50955a8-dirty
+[INFO] [2019-11-04 20:37:57] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:@tcp(localhost:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"127.0.0.1:6379","Password":""}}},"AppKeyMap":{"newsadmin":"12ZUsa8Qdxwvg","newsoffice":"43eqybRm37NpJ","openaua":"232*dBg2\u0026CUK*","s1aY7ZYad6Xm":"a1QY7ZYad6Xm","s3aY7ZYad6Xm":"a24QY7ZYad6Xm","s5aY7ZYad6Xm":"a4xQY7ZYad6Xm","s9QY7ZYad6Xm":"s98Y7ZYad6Xm"}}
+[INFO] [2019-11-04 20:37:57] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-11-04 20:37:57] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-11-04 20:37:57] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-11-04 20:37:57] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-11-04 20:37:57] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-11-04 20:37:57] [prometheus.go:242] - resSz registered.
+[INFO] [2019-11-04 20:38:00] [cache.go:26] - ping cache PONG
+[WARN] [2019-11-04 20:38:06] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&phone=15874732244&timestamp=1572877664 sign 89233b29752aafaccc754e26280a8ba80bf3e1a5ae4d5ae72e0720cc14814ac2, result be8b0b0001619c62cab8110a865caf31f0fbf500130ab4d8d968cbb85e9e5a7d
+[WARN] [2019-11-04 20:40:23] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&evaluate=True&phone=15874732244&timestamp=1572877664 sign be8b0b0001619c62cab8110a865caf31f0fbf500130ab4d8d968cbb85e9e5a7d, result b8758d146fcb2c73f46b9a08c47c72d0253ec237a28f7c7424c888f66f3421bd
+[ERROR] [2019-11-04 20:40:39] [student_model.go:253] - get own err, redis: nil
+[ERROR] [2019-11-04 20:40:39] [student_controller.go:799] - Add Evaluate error
+[WARN] [2019-11-04 20:40:45] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&evaluate=True&phone=15874732245&timestamp=1572877664 sign b8758d146fcb2c73f46b9a08c47c72d0253ec237a28f7c7424c888f66f3421bd, result 212ffc1a0cf3336e72c8a79066ba04ccbdf6366558c0da9d2bf6396d935a0e1b
+[WARN] [2019-11-04 20:41:17] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&evaluate=True1&phone=15874732245&timestamp=1572877664 sign 212ffc1a0cf3336e72c8a79066ba04ccbdf6366558c0da9d2bf6396d935a0e1b, result 6f1d014dfa4f5073fa55a8d620976c1aa88fe15905d5f5697e29897677dea5c9
+[WARN] [2019-11-04 20:46:27] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&address=321&gender=0&grade=321&major=321&name=111&phone=15874732245&salary=200&school=321&subject=6&teGrade=8&times=321&timestamp=1572877664 sign 212ffc1a0cf3336e72c8a79066ba04ccbdf6366558c0da9d2bf6396d935a0e1b, result 11318c8acf9d0aca6b1af696abb9184a6f5f26724153e5a97638b72179b48074
+[INFO] [2019-11-04 20:46:37] [cache.go:26] - ping cache PONG
+[WARN] [2019-11-04 20:49:49] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&evaluate=True&phone=15874732245&timestamp=1572877664 sign 11318c8acf9d0aca6b1af696abb9184a6f5f26724153e5a97638b72179b48074, result 212ffc1a0cf3336e72c8a79066ba04ccbdf6366558c0da9d2bf6396d935a0e1b
+[WARN] [2019-11-04 20:52:35] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&timestamp=1572877664 sign 212ffc1a0cf3336e72c8a79066ba04ccbdf6366558c0da9d2bf6396d935a0e1b, result 118c0f4511486c6a89f68f56061bd4901fe264bbcec98269b5f86ba6a54b418f
+[WARN] [2019-11-04 20:57:27] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&new_phone=15874732244&phone=15874732245&timestamp=1572877664 sign 118c0f4511486c6a89f68f56061bd4901fe264bbcec98269b5f86ba6a54b418f, result 87ded7574200dd1a6dca76e946841ef8b1c70dbb9169d26f272b277ac3528752
+[ERROR] [2019-11-04 20:57:38] [teacher_model.go:147] - get tegrade err, redis: nil
+[ERROR] [2019-11-04 20:57:38] [teacher_controller.go:303] - change phone error
+[INFO] [2019-11-04 20:59:49] [signal.go:16] - application[50955a8-dirty] get a signal interrupt
+[INFO] [2019-11-04 20:59:49] [main.go:167] - Shutdown Server ...
+[INFO] [2019-11-04 20:59:49] [main.go:174] - Server exist
+[INFO] [2019-11-04 21:00:54] [main.go:56] - Started Application at November 4, 2019 at 9:00pm (CST)
+[INFO] [2019-11-04 21:00:54] [main.go:57] - Version: 50955a8-dirty
+[INFO] [2019-11-04 21:00:54] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:@tcp(localhost:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"127.0.0.1:6379","Password":""}}},"AppKeyMap":{"newsadmin":"12ZUsa8Qdxwvg","newsoffice":"43eqybRm37NpJ","openaua":"232*dBg2\u0026CUK*","s1aY7ZYad6Xm":"a1QY7ZYad6Xm","s3aY7ZYad6Xm":"a24QY7ZYad6Xm","s5aY7ZYad6Xm":"a4xQY7ZYad6Xm","s9QY7ZYad6Xm":"s98Y7ZYad6Xm"}}
+[INFO] [2019-11-04 21:00:54] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-11-04 21:00:54] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-11-04 21:00:54] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-11-04 21:00:54] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-11-04 21:00:54] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-11-04 21:00:54] [prometheus.go:242] - resSz registered.
+[INFO] [2019-11-04 21:00:59] [cache.go:26] - ping cache PONG
+[WARN] [2019-11-04 21:04:58] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&new_phone=15874732244&phone=15874732245&timestamp=1572877664 sign 11318c8acf9d0aca6b1af696abb9184a6f5f26724153e5a97638b72179b48074, result 87ded7574200dd1a6dca76e946841ef8b1c70dbb9169d26f272b277ac3528752
+[WARN] [2019-11-04 21:06:32] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&address=15874732244&phone=15874732245&timestamp=1572877664 sign 87ded7574200dd1a6dca76e946841ef8b1c70dbb9169d26f272b277ac3528752, result d61e8a477e56cb8b08adfed5a0e72b903d44ea1fa58e8cae722c48609ac11875
+[WARN] [2019-11-04 21:07:22] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&address=15874732244&phone=15874732244&timestamp=1572877664 sign d61e8a477e56cb8b08adfed5a0e72b903d44ea1fa58e8cae722c48609ac11875, result bbbc36567db333f10bf95fcefed4de56663745db5696d34fd1dc5f067d692f9b
+[WARN] [2019-11-04 21:09:37] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&grade=15874732244&phone=15874732244&timestamp=1572877664 sign bbbc36567db333f10bf95fcefed4de56663745db5696d34fd1dc5f067d692f9b, result 8164cc0b4829dec9b6822733f02aaecdeefce9d281dbc09a63fc79bf4f2e7a96
+[WARN] [2019-11-04 21:11:08] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&phone=15874732244&teGrade=15874732244&timestamp=1572877664 sign 8164cc0b4829dec9b6822733f02aaecdeefce9d281dbc09a63fc79bf4f2e7a96, result f98c93bf4e5f3ef72d7ee80dbfee2a6a562762f5e703462ca12d1b6789ccb49c
+[WARN] [2019-11-04 21:12:05] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&name=15874732244&phone=15874732244&timestamp=1572877664 sign f98c93bf4e5f3ef72d7ee80dbfee2a6a562762f5e703462ca12d1b6789ccb49c, result 9db0563e88ab5394aa95a1108c611d38e5ee6dd341b0fb9a0e313f89dddfe939
+[WARN] [2019-11-04 21:13:16] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&phone=15874732244&school=15874732244&timestamp=1572877664 sign 9db0563e88ab5394aa95a1108c611d38e5ee6dd341b0fb9a0e313f89dddfe939, result 17fe5b1e54015dbd2ac69e467fcef2a0b684e282bd5ba92fb84d5484fc75f001
+[WARN] [2019-11-04 21:14:27] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&gender=15874732244&phone=15874732244&timestamp=1572877664 sign 17fe5b1e54015dbd2ac69e467fcef2a0b684e282bd5ba92fb84d5484fc75f001, result e02f45350fa9115a603920251d2f5b8c57438c215834ea49f5ef7517af5f5409
+[WARN] [2019-11-04 21:15:34] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&phone=15874732244&times=1572877664&timestamp=1572877664 sign e02f45350fa9115a603920251d2f5b8c57438c215834ea49f5ef7517af5f5409, result bc27f928339267a00be71b600bfb1098b02a983c36bef423e231711cdb546911
+[WARN] [2019-11-04 21:16:43] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&phone=15874732244&salary=15874732244&timestamp=1572877664 sign bc27f928339267a00be71b600bfb1098b02a983c36bef423e231711cdb546911, result c98aee88c002bd64b14ad174603c0f41ed31ebb5f5f32a2bcd9ddb70529542ce
+[WARN] [2019-11-04 21:18:12] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&major=15874732244&phone=15874732244&timestamp=1572877664 sign c98aee88c002bd64b14ad174603c0f41ed31ebb5f5f32a2bcd9ddb70529542ce, result dba096e9d9186a3a3ba9dfd12e6e5c4632f7110309768c8cd49e51864a792eb7
+[WARN] [2019-11-04 21:19:03] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&phone=15874732244&timestamp=1572877664 sign dba096e9d9186a3a3ba9dfd12e6e5c4632f7110309768c8cd49e51864a792eb7, result be8b0b0001619c62cab8110a865caf31f0fbf500130ab4d8d968cbb85e9e5a7d
+[INFO] [2019-11-04 21:21:30] [signal.go:16] - application[50955a8-dirty] get a signal interrupt
+[INFO] [2019-11-04 21:21:30] [main.go:167] - Shutdown Server ...
+[INFO] [2019-11-04 21:21:30] [main.go:174] - Server exist
+[INFO] [2019-11-04 21:21:40] [main.go:56] - Started Application at November 4, 2019 at 9:21pm (CST)
+[INFO] [2019-11-04 21:21:40] [main.go:57] - Version: 50955a8-dirty
+[INFO] [2019-11-04 21:21:40] [main.go:59] - Config: {"Monitor":true,"Logger":"config/logger.xml","MonitorAddrs":["0.0.0.0:4272"],"PprofAddrs":["0.0.0.0:4271"],"Addr":"0.0.0.0:4080","DB":{"Instances":{"master":{"Driver":"mysql","Url":"root:@tcp(localhost:3306)/token_bank?timeout=12s\u0026readTimeout=12s\u0026writeTimeout=5s\u0026parseTime=true\u0026charset=utf8mb4"}}},"Redis":{"Instances":{"master":{"Url":"127.0.0.1:6379","Password":""}}},"AppKeyMap":{"newsadmin":"12ZUsa8Qdxwvg","newsoffice":"43eqybRm37NpJ","openaua":"232*dBg2\u0026CUK*","s1aY7ZYad6Xm":"a1QY7ZYad6Xm","s3aY7ZYad6Xm":"a24QY7ZYad6Xm","s5aY7ZYad6Xm":"a4xQY7ZYad6Xm","s9QY7ZYad6Xm":"s98Y7ZYad6Xm"}}
+[INFO] [2019-11-04 21:21:40] [monitor.go:18] - start monitor listen: 0.0.0.0:4272
+[INFO] [2019-11-04 21:21:40] [prometheus.go:185] - reqCnt registered.
+[INFO] [2019-11-04 21:21:40] [prometheus.go:200] - interfaceReqCnt registered.
+[INFO] [2019-11-04 21:21:40] [prometheus.go:214] - reqDur registered.
+[INFO] [2019-11-04 21:21:40] [prometheus.go:228] - reqSz registered.
+[INFO] [2019-11-04 21:21:40] [prometheus.go:242] - resSz registered.
+[WARN] [2019-11-04 21:22:20] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&phone=15874732244&subject=15874732244&timestamp=1572877664 sign be8b0b0001619c62cab8110a865caf31f0fbf500130ab4d8d968cbb85e9e5a7d, result 04fb7a46a35109dde38279db84ab36230adb78a668ad416b5b93592477c451d8
+[INFO] [2019-11-04 21:22:37] [cache.go:26] - ping cache PONG
+[WARN] [2019-11-04 21:24:21] [auth.go:39] - sign string app_key=s98Y7ZYad6Xm&phone=15874732244&timestamp=1572877664 sign 04fb7a46a35109dde38279db84ab36230adb78a668ad416b5b93592477c451d8, result be8b0b0001619c62cab8110a865caf31f0fbf500130ab4d8d968cbb85e9e5a7d
+[INFO] [2019-11-04 21:25:17] [signal.go:16] - application[50955a8-dirty] get a signal interrupt
+[INFO] [2019-11-04 21:25:17] [main.go:168] - Shutdown Server ...
+[INFO] [2019-11-04 21:25:17] [main.go:175] - Server exist
